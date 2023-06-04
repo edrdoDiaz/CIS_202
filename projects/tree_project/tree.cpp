@@ -1,4 +1,6 @@
 #include "tree.h"
+#include <iostream> 
+
 
 Tree::Tree()
 {
@@ -32,8 +34,10 @@ int Node::size() const
    return 1 + sum;
 }
 
-void Node::print() const
+void Node::print() const 
 {
+   std::cout << data <<std::endl;
+
    for(Node* np: children) { 
     np-> print();
    }
@@ -44,4 +48,5 @@ void Tree::print() const
    if (root != nullptr) {
     root->print();
    }
+
 }
